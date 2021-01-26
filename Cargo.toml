@@ -1,0 +1,18 @@
+[package]
+name = "l3af-me"
+version = "0.1.0"
+authors = ["L3afMe <L3afMeAlon3@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4.6"
+rocket_codegen = "0.4.6"
+serde = "1.0.123"
+serde_derive = "1.0.123"
+
+[dependencies.rocket_contrib]
+version = "0.4.6"
+default-features = false
+features = ["tera_templates"]

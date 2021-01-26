@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>l3af.me</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" -->
+  <link rel="stylesheet" href="/assets/tailwind.css">
+  <link rel="stylesheet" href="/assets/main.css" />
+  <link rel="stylesheet" href="/assets/fonts.css" />
+</head>
+<body style="background: var(--nord1); font-family: Metropolis" class="p-0">
+  <div class="z-20 fixed inset-0 grid">
+    <div class="text-center justify-self-center self-center mb-32">
+      <a href="/" class="text-3xl md:text-6xl" style="color: var(--inori)">{{ title }}</a>
+      <p class="mt-2 mb-3 text-xl" style="color: var(--nord4)">{{ subheader }}</p>
+      <div class="inline-flex h-8 " style="color: var(--nord4)">
+      {% for btn in buttons %}
+        <a href="{{ btn.link }}" {% if btn.new_page %} target="_blank" {% endif %} class="mx-2 w-24 inline-grid justify-items-center content-center rounded-lg shadow-nord inline btn transition-all">
+          <p>{{ btn.label }}</p>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <svg class="z-10 fixed bottom-0 min-w-full h-5/6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="var(--nord0)" fill-opacity="1" d="M0,96L60,112C120,128,240,160,360,160C480,160,600,128,720,122.7C840,117,960,139,1080,138.7C1200,139,1320,117,1380,106.7L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+  </svg>
+  <svg class="z-0 fixed bottom-0 min-w-full h-2/3" mlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="var(--inori)" fill-opacity="1" d="M0,288L60,272C120,256,240,224,360,181.3C480,139,600,85,720,58.7C840,32,960,32,1080,26.7C1200,21,1320,11,1380,5.3L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+  </svg>
+</body>
+</html>

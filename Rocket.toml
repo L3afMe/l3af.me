@@ -1,0 +1,13 @@
+[global]
+template_dir = "templates/"
+assets_dir = "assets/"
+
+[development]
+address = "localhost"
+port = 800
+log = "normal"
+
+[production]
+address = "l3af.me"
+port = 80
+log = "critical"
