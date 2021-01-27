@@ -1,13 +1,12 @@
 [global]
 template_dir = "templates/"
 assets_dir = "assets/"
+log = "normal"
 
 [development]
 address = "localhost"
-port = 800
-log = "normal"
+port = 8000
 
 [production]
-address = "l3af.me"
+address = "0.0.0.0"
 port = 80
-log = "critical"
