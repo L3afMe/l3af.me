@@ -3,10 +3,11 @@
   <title>l3af.me</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css" />
   <script src="/assets/svg.min.js"></script>
 </head>
-<body style="background: var(--nord1); font-family: Metropolis" class="p-0">
+<body style="background: #3b4252; font-family: Metropolis" class="p-0">
   <div class="z-20 fixed inset-0 grid">
     <div class="text-center justify-self-center self-center mb-32">
       <a href="/" class="text-6xl" style="color: var(--inori)">{{ title }}</a>
@@ -22,8 +23,8 @@
   </div>
 
 
-  <div id="back-wave" class="z-0 fixed bottom-0 min-w-full h-2/3"></div>
-  <div id="front-wave" class="z-10 fixed bottom-0 min-w-full h-3/5"></div>
+  <div id="back-wave" class="wave-container z-0 fixed bottom-0 min-w-full h-2/3"></div>
+  <div id="front-wave" class="wave-container z-10 fixed bottom-0 min-w-full h-3/5"></div>
   
   <script>
   let waves = [
@@ -46,14 +47,21 @@
     svg.loop(true, true);
   }
   
+  let curWidth = Math.max(1440, Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0));
+    let widthScale = Math.max(1, (curWidth / 1440) ** 2 * 0.75);
+
   let front = SVG('front-wave')
-    .size(1440, 10000)
+    .size(curWidth, 10000)
+    .viewbox(0, 0, 1440, 10000)
+    .scale(widthScale, 1)
     .path(randomWave())
     .fill('var(--nord0)');
   addWaves(front, 11500);
   
   let back = SVG('back-wave')
-    .size(1440, 10000)
+    .size(curWidth, 10000)
+    .viewbox(0, 0, 1440, 10000)
+    .scale(widthScale, 1)
     .path(randomWave())
     .fill('var(--inori)');
   addWaves(back, 9000);
