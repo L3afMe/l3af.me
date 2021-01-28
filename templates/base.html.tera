@@ -3,13 +3,11 @@
   <title>l3af.me</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
-  <!--link rel="stylesheet" href="/assets/tailwind.css"-->
+  <!--link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"-->
+  <link rel="stylesheet" href="/assets/tailwind.css" />
   <link rel="stylesheet" href="/assets/main.css" />
-  <link rel="stylesheet" href="/assets/fonts.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.7.1/svg.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.16/polyfills.js"></script>
-  <script src="/assets/svg.pathmorphing.min.js"></script>
+  <link rel="stylesheet" href="/assets/fonts.css" async/>
+  <script src="/assets/svg.min.js"></script>
 </head>
 <body style="background: var(--nord1); font-family: Metropolis" class="p-0">
   <div class="z-20 fixed inset-0 grid">
